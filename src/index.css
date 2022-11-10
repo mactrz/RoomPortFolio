@@ -33,5 +33,6 @@ code {
 
 .main {
   position: absolute;
+  display: grid;
   z-index: 2;
 }

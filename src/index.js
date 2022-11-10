@@ -25,7 +25,7 @@ root.render(
       </React.Suspense>
     </Canvas>
     <div className='main'>
-
+      SIEMANO JA JEST MACIEŁE
     </div>
   </>
 );

@@ -3,9 +3,11 @@ import React, { Suspense, useRef } from 'react';
 import {Model}  from './RoomFinalTexture';
 import { Box, useHelper } from '@react-three/drei/core';
 import { CameraHelper, DirectionalLightHelper } from 'three';
+import { useThree } from '@react-three/fiber'
 
 function App() {
   const ref = useRef();
+  const { viewport } = useThree()
   useHelper(ref, CameraHelper, 1)
 
   return (
@@ -17,11 +19,11 @@ function App() {
         shadow-camera-near={0.1} shadow-camera-far={60} castShadow/>
       <OrthographicCamera zoom={70} makeDefault position={[10, 10, 10]}/>
       {/* <gridHelper args={[20, 20, `white`, `gray`]} /> */}
-      <Box receiveShadow castShadow position={[4, -2, 4]} scale={[20, 0.2, 20]}>
-        <meshPhysicalMaterial color="green"/>
+      <Box receiveShadow castShadow position={[4, -2, 4]} scale={[50, 0.2, 50]}>
+        <meshPhysicalMaterial color="hotpink"/>
       </Box>
       <Suspense fallback={null}>
-        <Model position={[0,0,0]} rotation={[0,4.7,0]}/>
+        <Model scale={viewport.aspect / 2} position={[0,0,0]} rotation={[0,1.5 * Math.PI,0]}/>
       </Suspense>
     </React.Fragment>
   );
