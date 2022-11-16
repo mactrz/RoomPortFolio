@@ -40,48 +40,67 @@ code {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   z-index: 2;
-  justify-items: center;
-  overflow-x: scroll;
-  margin-top: 20px;
+  /* overflow-x: hidden; */
+  overflow-y: scroll;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .element {
   height: 30vh;
-  font-size: 3vh;
-  color: black;
+  font-size: 4vh;
+  color: white;
+}
+
+.long {
+  height: 60vh;
+}
+
+.gigalong {
+  height: 120vh;
 }
 
 #name {
   height: 30vh;
-  font-size: 4vh;
+  font-size: 5vh;
 }
 
 .left {
   background-color: #b39e9e;
   opacity: 0.9;
-  border-top-right-radius: 30%;
-  border-bottom-right-radius: 30%;
-  width: 100%;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  width: 90%;
   padding-left: 15px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .left-first {
-  width: 100%;
+  width: 90%;
   padding-left: 15px;
+  color: white;
 }
 
 .right {
   background-color: #b39e9e;
   opacity: 0.9;
-  border-top-left-radius: 30%;
-  border-bottom-left-radius: 30%;
-  width: 100%;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  width: 90%;
   padding-right: 15px;
   text-align: end;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .right-first {
-  width: 100%;
-  padding-right: 150px;
+  width: 90%;
+  padding-right: 15px;
   text-align: end;
+  color: white;
 }
