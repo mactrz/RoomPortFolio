@@ -16,8 +16,8 @@ body,
 }
 
 body {
-  background-color: #b39e9e;
   color: #f0f0f0;
+  background-color: #ff69b4;
   overflow: hidden;
 }
 
@@ -46,10 +46,43 @@ code {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 681px) {
+  .element {
+    font-size: 60px;
+  }
+
+  #name {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 680px) and (min-width: 450px) {
+  .element {
+    font-size: 35px;
+  }
+
+  #name {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .element {
+    font-size: 27px;
+  }
+
+  #name {
+    font-size: 30px;
+  }
+}
+
 .element {
   height: 30vh;
-  font-size: 4vh;
   color: white;
+}
+
+p {
+  margin: 5px
 }
 
 .long {
@@ -62,7 +95,6 @@ code {
 
 #name {
   height: 30vh;
-  font-size: 5vh;
 }
 
 .left {
@@ -103,4 +135,21 @@ code {
   padding-right: 15px;
   text-align: end;
   color: white;
+}
+
+.loadingContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  background-color: yellow;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  position: relative;
 }
