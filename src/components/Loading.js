@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { animated, useTrail } from "react-spring";
 
-const Loading = () => {
+function Loading() {
 
     const trail = useTrail(3, {
         from: {y: -100},
